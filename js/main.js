@@ -64,9 +64,7 @@ pie.addEventListener('click', function clickPie() {
   document.getElementById("dessert").innerHTML="<img src='img/Pie.jpg' />";
 });
 
-// // reset button
-// var reset = document.querySelector('.Reset');
-// HTMLDIVelement.onclick() = function reset(){
-//   console.log('Reset clicked.');
-//   document.getElementById("reset").reset();
-// };
+// reset button
+function refreshPage(){
+    window.location.reload();
+} 
