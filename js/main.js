@@ -64,7 +64,42 @@ pie.addEventListener('click', function clickPie() {
   document.getElementById("dessert").innerHTML="<img src='img/Pie.jpg' />";
 });
 
+// $(document).ready(function () {
+//
+//   function Result() {
+    // var apple = document.getElementById("apple").innerHTML;
+//     var banana = $("#banana");
+//     var orange = $("#orange");
+    // var icecream = document.getElementById("icecream").innerHTML;
+//     var cake = $("#cake");
+//     var pie = $("#pie");
+
+//     if (apple.clickApple == true && icecream.clickIceCream == true) {
+//         document.getElementById("result").innerHTML="<img src='img/AppleIceCream.jpg' />";
+//     } else if (banana.clickBanana == true && icecream.clickIceCream == true) {
+//         document.getElementById("result").innerHTML="<img src='img/BananaIceCream.jpeg' />";
+//     } else if (orange.clickOrange == true && icecream.clickIceCream == true) {
+//       document.getElementById("result").innerHTML="<img src='img/OrangeIceCream.jpg' />";
+//     } else if (orange.clickOrange == true && cake.clickCake == true) {
+//       document.getElementById("result").innerHTML="<img src='img/OrangeCake.jpg' />";
+//     } else if (orange.clickOrange == true && pie.clickPie == true) {
+//       document.getElementById("result").innerHTML="<img src='img/OrangePie.jpg' />";
+//     } else if (apple.clickApple == true && pie.clickPie == true) {
+//       document.getElementById("result").innerHTML="<img src='img/ApplePie.jpg' />";
+//     } else if (apple.clickApple == true && cake.clickCake == true) {
+//       document.getElementById("result").innerHTML="<img src='img/OrangeCake.jpg' />";
+//     } else if (banana.clickBanana == true && cake.clickCake == true) {
+//         document.getElementById("result").innerHTML="<img src='img/BananaCake.jpg' />";
+//     } else if (banana.clickBanana == true && pie.clickPie == true) {
+//         document.getElementById("result").innerHTML="<img src='img/BananaPie.jpg' />";
+//     } else {
+//
+//     }
+//   };
+//     $("#apple, #banana, #orange, #icecream, #cake, #pie").change(Result);
+// });
+
 // reset button
 function refreshPage(){
     window.location.reload();
-} 
+}
