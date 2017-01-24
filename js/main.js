@@ -34,32 +34,39 @@ var images = {
 };
 
 var apple = document.querySelector('.Fruit--apple');
-apple.addEventListener('click', function() {
+apple.addEventListener('click', function clickApple() {
   console.log('Apple clicked.');
   document.getElementById("fruit").innerHTML="<img src='img/Apple.jpg' />";
 });
 var orange = document.querySelector('.Fruit--orange');
-orange.addEventListener('click', function() {
+orange.addEventListener('click', function clickOrange() {
   console.log('Orange clicked.');
   document.getElementById("fruit").innerHTML="<img src='img/Orange.jpg' />";
 });
 var banana = document.querySelector('.Fruit--banana');
-banana.addEventListener('click', function() {
+banana.addEventListener('click', function clickBanana() {
   console.log('Banana clicked.');
   document.getElementById("fruit").innerHTML="<img src='img/Banana.jpg' />";
 });
 var icecream = document.querySelector('.Dessert--icecream');
-icecream.addEventListener('click', function() {
+icecream.addEventListener('click', function clickIceCream() {
   console.log('Ice Cream clicked.');
   document.getElementById("dessert").innerHTML="<img src='img/IceCream.jpg' />";
 });
 var cake = document.querySelector('.Dessert--cake');
-cake.addEventListener('click', function() {
+cake.addEventListener('click', function clickCake() {
   console.log('Cake clicked.');
   document.getElementById("dessert").innerHTML="<img src='img/Cake.jpg' />";
 });
 var pie = document.querySelector('.Dessert--pie');
-pie.addEventListener('click', function() {
+pie.addEventListener('click', function clickPie() {
   console.log('Pie clicked.');
   document.getElementById("dessert").innerHTML="<img src='img/Pie.jpg' />";
 });
+
+// // reset button
+// var reset = document.querySelector('.Reset');
+// HTMLDIVelement.onclick() = function reset(){
+//   console.log('Reset clicked.');
+//   document.getElementById("reset").reset();
+// };
