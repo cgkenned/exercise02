@@ -33,73 +33,97 @@ var images = {
   }
 };
 
+// fruit dom elements
+
 var apple = document.querySelector('.Fruit--apple');
+var orange = document.querySelector('.Fruit--orange');
+var banana = document.querySelector('.Fruit--banana');
+
+// dessert dom elements
+
+var icecream = document.querySelector('.Dessert--icecream');
+var cake = document.querySelector('.Dessert--cake');
+var pie = document.querySelector('.Dessert--pie');
+
+// holders
+
+var fruitHolder = document.querySelector('.Holder--fruit')
+var dessertHolder = document.querySelector('.Holder--dessert')
+var resultHolder = document.querySelector('.Holder--result')
+
+var reset = document.querySelector('.Reset');
+
+// event listeners
+
+reset.addEventListener('click', function Reset () {
+  setFruit = null;
+  setDessert = null;
+});
+
 apple.addEventListener('click', function clickApple() {
-  console.log('Apple clicked.');
+  setFruit('apple');
   document.getElementById("fruit").innerHTML="<img src='img/Apple.jpg' />";
 });
-var orange = document.querySelector('.Fruit--orange');
+
 orange.addEventListener('click', function clickOrange() {
-  console.log('Orange clicked.');
+  setFruit('orange');
   document.getElementById("fruit").innerHTML="<img src='img/Orange.jpg' />";
 });
-var banana = document.querySelector('.Fruit--banana');
+
 banana.addEventListener('click', function clickBanana() {
-  console.log('Banana clicked.');
+  setFruit('banana');
   document.getElementById("fruit").innerHTML="<img src='img/Banana.jpg' />";
 });
-var icecream = document.querySelector('.Dessert--icecream');
+
 icecream.addEventListener('click', function clickIceCream() {
-  console.log('Ice Cream clicked.');
+  setDessert('icecream');
   document.getElementById("dessert").innerHTML="<img src='img/IceCream.jpg' />";
 });
-var cake = document.querySelector('.Dessert--cake');
+
 cake.addEventListener('click', function clickCake() {
-  console.log('Cake clicked.');
+  setDessert('cake');
   document.getElementById("dessert").innerHTML="<img src='img/Cake.jpg' />";
 });
-var pie = document.querySelector('.Dessert--pie');
+
 pie.addEventListener('click', function clickPie() {
-  console.log('Pie clicked.');
+  setDessert('pie');
   document.getElementById("dessert").innerHTML="<img src='img/Pie.jpg' />";
 });
 
-// $(document).ready(function () {
-//
-//   function Result() {
-    // var apple = document.getElementById("apple").innerHTML;
-//     var banana = $("#banana");
-//     var orange = $("#orange");
-    // var icecream = document.getElementById("icecream").innerHTML;
-//     var cake = $("#cake");
-//     var pie = $("#pie");
 
-//     if (apple.clickApple == true && icecream.clickIceCream == true) {
-//         document.getElementById("result").innerHTML="<img src='img/AppleIceCream.jpg' />";
-//     } else if (banana.clickBanana == true && icecream.clickIceCream == true) {
-//         document.getElementById("result").innerHTML="<img src='img/BananaIceCream.jpeg' />";
-//     } else if (orange.clickOrange == true && icecream.clickIceCream == true) {
-//       document.getElementById("result").innerHTML="<img src='img/OrangeIceCream.jpg' />";
-//     } else if (orange.clickOrange == true && cake.clickCake == true) {
-//       document.getElementById("result").innerHTML="<img src='img/OrangeCake.jpg' />";
-//     } else if (orange.clickOrange == true && pie.clickPie == true) {
-//       document.getElementById("result").innerHTML="<img src='img/OrangePie.jpg' />";
-//     } else if (apple.clickApple == true && pie.clickPie == true) {
-//       document.getElementById("result").innerHTML="<img src='img/ApplePie.jpg' />";
-//     } else if (apple.clickApple == true && cake.clickCake == true) {
-//       document.getElementById("result").innerHTML="<img src='img/OrangeCake.jpg' />";
-//     } else if (banana.clickBanana == true && cake.clickCake == true) {
-//         document.getElementById("result").innerHTML="<img src='img/BananaCake.jpg' />";
-//     } else if (banana.clickBanana == true && pie.clickPie == true) {
-//         document.getElementById("result").innerHTML="<img src='img/BananaPie.jpg' />";
-//     } else {
-//
-//     }
-//   };
-//     $("#apple, #banana, #orange, #icecream, #cake, #pie").change(Result);
-// });
 
-// reset button
-function refreshPage(){
-    window.location.reload();
+function setFruit(f) {
+  console.log(f + ' clicked');
+  currentFruit = f;
+
+if (currentFruit !== null) {
+  fruitHolder.innerHTML = `<img src="${images.fruits[currentFruit]}" />`;
+} else {
+  fruitHolder.innerHTML = '';
+}
+
+loadMix();
+
+}
+
+function setDessert(d) {
+  console.log(d + ' clicked');
+  currentDessert = d;
+
+  if (currentDessert !== null) {
+    dessertHolder.innerHTML = `<img src="${images.desserts[currentDessert]}" />`;
+  } else {
+    dessertHolder.innerHTML = '';
+  }
+
+loadMix();
+
+}
+
+function loadMix() {
+  if (currentFruit !== null && currentDessert !== null) {
+    resultHolder.innerHTML = `<img src="${images.mixes[currentFruit][currentDessert]}" />`;
+  } else {
+    resultHolder.innerHTML = '';
+  }
 }
